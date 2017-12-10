@@ -5,7 +5,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        your react works
         <StickyIndex />
       </div>
     );

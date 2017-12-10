@@ -27,13 +27,17 @@ class Sticky extends React.Component {
   }
   
   handleSubmit(e) {
+    debugger;
     e.preventDefault();
     this.props.updateSticky(this.state.title, this.state.content);
     this.setState({ editing: false });
   }
   
   handleClickOutside(e) {
-    this.handleSubmit(e);
+    if (this.state.editing) {
+      this.props.updateSticky(this.state.title, this.state.content);
+      this.setState({ editing: false });
+    }
   }
   
   render () {
@@ -42,7 +46,7 @@ class Sticky extends React.Component {
         {
           !this.state.editing ?
           (
-            <div className="sticky-title"
+            <div className="sticky-title sticky-noninput"
               onClick={this.enableEdit("title")}>
               {this.state.title}
             </div>
@@ -61,7 +65,7 @@ class Sticky extends React.Component {
         {
           !this.state.editing ?
           (
-            <div className="sticky-content"
+            <div className="sticky-content sticky-noninput"
               onClick={this.enableEdit("content")}>
               {this.state.content}
             </div>

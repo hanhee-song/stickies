@@ -23,26 +23,42 @@
   flex-direction: column;
 }
 
+.sticky-noninput { border: 1px solid #fff; }
+
+.sticky-noninput:hover { border: 1px solid #ccc; }
+
 .sticky-title {
   margin: 10px;
-  border: 1px solid black;
   width: 180px;
-  height: 30px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px
 }
 
 .sticky-content {
   margin: 0 10px 10px 10px;
   width: 180px;
   height: 150px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .sticky-input {
   height: 100%;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #aaa;
   padding: 0;
+  font-family: sans-serif;
+  outline: none;
 }
 
-.sticky-title-input {}
+.sticky-title-input {
+  font-size: 16px;
+}
 
-.sticky-content-input {}
+.sticky-content-input {
+  font-size: 14px;
+  width: 180px;
+  height: 143px;
+  line-height: 20px;
+}
