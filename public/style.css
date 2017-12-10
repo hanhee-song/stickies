@@ -9,56 +9,56 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  border: 1px solid red;
-  width: 800px;
-  min-height: 400px;
+  margin-top: 5rem;
+  width: 50rem;
+  min-height: 25rem;
 }
 
 .sticky {
   background: linear-gradient(0deg, #ecf282, #fbff8c);
-  width: 200px;
-  height: 200px;
-  margin: 10px;
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 0.625rem;
   display: flex;
   flex-direction: column;
 }
 
 .sticky-title {
-  margin: 10px;
-  width: 180px;
-  height: 20px;
-  font-size: 16px;
-  line-height: 18px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  margin: 0.625rem;
+  width: 11.25rem;
+  height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .sticky-title:hover {
-  border: 1px solid #d5d5d5;
+  border: 0.0625rem solid #d5d5d5;
 }
 
 .sticky-content {
-  margin: 0 10px 10px 10px;
-  width: 180px;
-  height: 150px;
-  font-size: 14px;
-  line-height: 18px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  margin: 0 0.625rem 0.625rem 0.625rem;
+  width: 11.25rem;
+  height: 9.375rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0);
   overflow-wrap: break-word;
 }
 
 .sticky-content:hover {
-  border: 1px solid #d5d5d5;
+  border: 0.0625rem solid #d5d5d5;
 }
 
 .selected {
-  border: 1px solid #bbb;
+  border: 0.0625rem solid #bbb;
 }
 
 .selected:hover {
-  border: 1px solid #999;
+  border: 0.0625rem solid #999;
 }
 
 .sticky-input {
@@ -71,11 +71,11 @@
 }
 
 .sticky-title-input {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .sticky-content-input {
-  font-size: 14px;
-  line-height: 18px;
-  height: 148px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  height: 9.25rem;
 }

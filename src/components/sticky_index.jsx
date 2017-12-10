@@ -11,10 +11,6 @@ class StickyIndex extends React.Component {
           content: "sticky 1 content",
         },
         {
-          title: "sticky 2",
-          content: "sticky 2 content",
-        },
-        {
           title: "",
           content: "",
         },
