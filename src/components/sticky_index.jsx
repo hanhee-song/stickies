@@ -8,20 +8,37 @@ class StickyIndex extends React.Component {
       stickies: [
         {
           title: "sticky 1",
-          content: "sticky 1 content"
+          content: "sticky 1 content",
         },
         {
           title: "sticky 2",
-          content: "sticky 2 content"
-        }
+          content: "sticky 2 content",
+        },
+        {
+          title: "",
+          content: "",
+        },
       ]
     };
     this.updateSticky = this.updateSticky.bind(this);
   }
   
-  updateSticky(title, content) {
-    return () => {
-      
+  updateSticky(i) {
+    return (title, content) => {
+      const updatedSticky = {
+        title,
+        content,
+      };
+      const stickies = this.state.stickies.map((sticky, j) => {
+        if (i === j) {
+          return updatedSticky;
+        } else {
+          return sticky;
+        }
+      });
+      this.setState({
+        stickies
+      });
     };
   }
   
