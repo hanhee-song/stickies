@@ -28,12 +28,18 @@ class Sticky extends React.Component {
   
   handleSubmit(e) {
     e.preventDefault();
+    if (this.state.content && !this.state.title) {
+      this.setState({ title: "untitled" });
+    }
     this.props.updateSticky(this.state.title, this.state.content);
     this.setState({ editing: false });
   }
   
   handleClickOutside(e) {
     if (this.state.editing) {
+      if (this.state.content && !this.state.title) {
+        this.setState({ title: "untitled" });
+      }
       this.props.updateSticky(this.state.title, this.state.content);
       this.setState({ editing: false });
     }

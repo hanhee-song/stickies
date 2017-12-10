@@ -15,7 +15,7 @@
 }
 
 .sticky {
-  border: 1px solid blue;
+  background: linear-gradient(0deg, #ecf282, #fbff8c);
   width: 200px;
   height: 200px;
   margin: 10px;
@@ -29,7 +29,7 @@
   height: 20px;
   font-size: 16px;
   line-height: 18px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -45,7 +45,7 @@
   height: 150px;
   font-size: 14px;
   line-height: 18px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
   overflow-wrap: break-word;
 }
 
@@ -67,6 +67,7 @@
   font-family: sans-serif;
   outline: none;
   border: none;
+  background-color: rgba(0, 0, 0, 0)
 }
 
 .sticky-title-input {
