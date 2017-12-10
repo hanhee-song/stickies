@@ -44,7 +44,7 @@ class Sticky extends React.Component {
     return(
       <div className="sticky">
         {
-          !this.state.editing ?
+          this.state.editing !== "title" ?
           (
             <div className="sticky-title sticky-noninput"
               onClick={this.enableEdit("title")}>
@@ -63,7 +63,7 @@ class Sticky extends React.Component {
           )
         }
         {
-          !this.state.editing ?
+          this.state.editing !== "content" ?
           (
             <div className="sticky-content sticky-noninput"
               onClick={this.enableEdit("content")}>

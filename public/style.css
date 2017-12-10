@@ -25,7 +25,7 @@
 
 .sticky-noninput { border: 1px solid #fff; }
 
-.sticky-noninput:hover { border: 1px solid #ccc; }
+.sticky-noninput:hover { border: 1px solid #d5d5d5; }
 
 .sticky-title {
   margin: 10px;
