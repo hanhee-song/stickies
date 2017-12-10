@@ -27,7 +27,6 @@ class Sticky extends React.Component {
   }
   
   handleSubmit(e) {
-    debugger;
     e.preventDefault();
     this.props.updateSticky(this.state.title, this.state.content);
     this.setState({ editing: false });
@@ -46,12 +45,12 @@ class Sticky extends React.Component {
         {
           this.state.editing !== "title" ?
           (
-            <div className="sticky-title sticky-noninput"
+            <div className="sticky-title"
               onClick={this.enableEdit("title")}>
               {this.state.title}
             </div>
           ) : (
-            <form className="sticky-title"
+            <form className="sticky-title selected"
               onSubmit={this.handleSubmit}>
               <input
                 className="sticky-title-input sticky-input"
@@ -65,12 +64,12 @@ class Sticky extends React.Component {
         {
           this.state.editing !== "content" ?
           (
-            <div className="sticky-content sticky-noninput"
+            <div className="sticky-content"
               onClick={this.enableEdit("content")}>
               {this.state.content}
             </div>
           ) : (
-            <form className="sticky-content"
+            <form className="sticky-content selected"
               onSubmit={this.handleSubmit}>
               <textarea
                 className="sticky-content-input sticky-input"

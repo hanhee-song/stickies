@@ -26,7 +26,7 @@ class StickyIndex extends React.Component {
   updateSticky(i) {
     return (title, content) => {
       const updatedSticky = {
-        title,
+        title: title || "untitled",
         content,
       };
       const stickies = this.state.stickies.map((sticky, j) => {
@@ -36,6 +36,9 @@ class StickyIndex extends React.Component {
           return sticky;
         }
       });
+      if (i === stickies.length - 1 && (title || content)) {
+        stickies.push({ title: "", content: "" });
+      }
       this.setState({
         stickies
       });

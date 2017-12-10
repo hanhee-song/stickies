@@ -23,16 +23,20 @@
   flex-direction: column;
 }
 
-.sticky-noninput { border: 1px solid #fff; }
-
-.sticky-noninput:hover { border: 1px solid #d5d5d5; }
-
 .sticky-title {
   margin: 10px;
   width: 180px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 16px
+  height: 20px;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #fff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sticky-title:hover {
+  border: 1px solid #d5d5d5;
 }
 
 .sticky-content {
@@ -40,16 +44,29 @@
   width: 180px;
   height: 150px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
+  border: 1px solid #fff;
+  overflow-wrap: break-word;
+}
+
+.sticky-content:hover {
+  border: 1px solid #d5d5d5;
+}
+
+.selected {
+  border: 1px solid #bbb;
+}
+
+.selected:hover {
+  border: 1px solid #999;
 }
 
 .sticky-input {
-  height: 100%;
   width: 100%;
-  border: 1px solid #aaa;
   padding: 0;
   font-family: sans-serif;
   outline: none;
+  border: none;
 }
 
 .sticky-title-input {
@@ -58,7 +75,6 @@
 
 .sticky-content-input {
   font-size: 14px;
-  width: 180px;
-  height: 143px;
-  line-height: 20px;
+  line-height: 18px;
+  height: 148px;
 }
