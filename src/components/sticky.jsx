@@ -1,5 +1,5 @@
 import React from 'react';
-// import onClickOutside from "react-onclickoutside";
+import onClickOutside from "react-onclickoutside";
 
 class Sticky extends React.Component {
   constructor(props) {
@@ -32,9 +32,9 @@ class Sticky extends React.Component {
     this.setState({ editing: false });
   }
   
-  // handleClickOutside(e) {
-  //   this.handleSubmit(e);
-  // }
+  handleClickOutside(e) {
+    this.handleSubmit(e);
+  }
   
   render () {
     return(
@@ -82,4 +82,4 @@ class Sticky extends React.Component {
   }
 }
 
-export default Sticky;
+export default onClickOutside(Sticky);
