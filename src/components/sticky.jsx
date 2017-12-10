@@ -12,6 +12,7 @@ class Sticky extends React.Component {
     this.enableEdit = this.enableEdit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
   
   enableEdit(field) {
@@ -28,21 +29,21 @@ class Sticky extends React.Component {
   
   handleSubmit(e) {
     e.preventDefault();
+    this.handleUpdate();
+  }
+  
+  handleClickOutside(e) {
+    if (this.state.editing) {
+      this.handleUpdate();
+    }
+  }
+  
+  handleUpdate() {
     if (this.state.content && !this.state.title) {
       this.setState({ title: "untitled" });
     }
     this.props.updateSticky(this.state.title, this.state.content);
     this.setState({ editing: false });
-  }
-  
-  handleClickOutside(e) {
-    if (this.state.editing) {
-      if (this.state.content && !this.state.title) {
-        this.setState({ title: "untitled" });
-      }
-      this.props.updateSticky(this.state.title, this.state.content);
-      this.setState({ editing: false });
-    }
   }
   
   render () {
