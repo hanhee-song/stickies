@@ -1,4 +1,5 @@
 import React from 'react';
+// import onClickOutside from "react-onclickoutside";
 
 class Sticky extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Sticky extends React.Component {
     };
     this.enableEdit = this.enableEdit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   
   enableEdit(field) {
@@ -24,9 +26,15 @@ class Sticky extends React.Component {
     };
   }
   
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.updateSticky(this.state.title, this.state.content);
+    this.setState({ editing: false });
   }
+  
+  // handleClickOutside(e) {
+  //   this.handleSubmit(e);
+  // }
   
   render () {
     return(
@@ -39,9 +47,10 @@ class Sticky extends React.Component {
               {this.state.title}
             </div>
           ) : (
-            <form className="sticky-title form"
+            <form className="sticky-title"
               onSubmit={this.handleSubmit}>
               <input
+                className="sticky-title-input sticky-input"
                 autoFocus={this.state.editing === "title"}
                 onChange={this.handleChange("title")}
                 value={this.state.title}
@@ -57,9 +66,10 @@ class Sticky extends React.Component {
               {this.state.content}
             </div>
           ) : (
-            <form className="sticky-content form"
+            <form className="sticky-content"
               onSubmit={this.handleSubmit}>
-              <input
+              <textarea
+                className="sticky-content-input sticky-input"
                 autoFocus={this.state.editing === "content"}
                 onChange={this.handleChange("content")}
                 value={this.state.content}
