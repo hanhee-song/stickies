@@ -1,3 +1,28 @@
-.App {
-  
+.App {}
+
+.sticky-index {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  width: 800px;
+  min-height: 400px;
+}
+
+.sticky {
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: auto;
+}
+
+.sticky-title {
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.sticky-content {
+  margin: 0 10px 10px 10px;
 }
